@@ -1,6 +1,12 @@
-describe("Esto es una suite de pruebas", () => {
-    test('Caso de prueba 1', () => {
-      const result = 1 + 2 
-      expect(result).toBe(10);
-    });
-  })
+/*
+ * Require es el estándar de CommonJS para exportar módulos en JS
+ * Se necesita específicar la ruta del script de js a importar en este script
+ * */
+const MissionCommander = require('./../app/missionCommander');
+
+describe("Unit Tests for Mission Commander Class", () => {
+  test('1) Create a mission commander objet', () => {
+    const myMissionCommander = new MissionCommander("Carlo")
+    expect(myMissionCommander.name).toBe("Carlo");
+  });
+})
